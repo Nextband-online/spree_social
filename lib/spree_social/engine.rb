@@ -40,7 +40,7 @@ module SpreeSocial
     begin
       ActiveRecord::Base.connection_pool.with_connection(&:active?)
     rescue
-      return
+     return
     end
 
     return unless ActiveRecord::Base.connection.data_source_exists?('spree_authentication_methods')
